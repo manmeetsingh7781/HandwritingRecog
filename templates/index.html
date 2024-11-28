@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digit Recognization - Manmeet Singh</title>
+  </head>
+
+  <style>
+    body {
+      /*  */
+      background-color: whitesmoke;
+      font-family: sans-serif;
+      margin: auto;
+    }
+    #myCanvas {
+      background-color: white;
+    }
+    h2 {
+      font: 2.5em sans-serif;
+    }
+    #result {
+      font-size: 2em;
+      font-weight: bold;
+      color: #4caf50;
+    }
+    button {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:active {
+      background-color: #3e8e41;
+    }
+
+    #items {
+      margin: 0;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    #section {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <!-- write a function so that user can draw on canvas, the image of the canvas should be 28x28 black and white -->
+    <!-- add save button so that the image should save in 28x28 size -->
+    <div id="items">
+      {% for item in items['model_initial'] %}
+      <p>{{item}}</p>
+      {% endfor %}
+    </div>
+    <div id="section">
+      <h1>{{items['title']}}</h1>
+
+      <h2>
+        Predicted Output
+        <br />
+        <span id="result"> {{items['output']}} </span>
+      </h2>
+
+      <canvas id="myCanvas" width="480" height="480"></canvas>
+
+      <br />
+      <button id="saveButton">Process Image</button>
+      <button id="clearButton">Clear</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

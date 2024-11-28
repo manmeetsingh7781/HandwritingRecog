@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+import os, sys
+sys.path.append(os.path.join(os.path.dirname(__file__), "models"))
 from mnist import get_image, get_model_initial_prints
 import base64
 
@@ -36,4 +38,4 @@ def process_image():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
