@@ -1,4 +1,4 @@
-# Handwriting Recognization
+# Handwriting Recognition 
 
 ## Steps to follow
 
