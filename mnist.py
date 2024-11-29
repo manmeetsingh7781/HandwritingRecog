@@ -13,7 +13,7 @@ from PIL import Image
 class_labels = {
     0: "0", 1: "1", 2: "2", 3: "3", 4: "4", 5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
 }
-model_path = './handwriting_classifier_default.pth'
+model_path = './model/handwriting_classifier_default.pth'
 
 # this is tracing the file print statements and sending to web page
 model_initial = ""
@@ -142,7 +142,7 @@ def train_model(epochs):
         scheduler.step(val_loss / len(val_loader))
         print(f"Epoch {epoch + 1}, Train Loss: {running_loss / len(train_loader):.4f}, Val Loss: {val_loss / len(val_loader):.4f}")
 
-    torch.save(model.state_dict(), model_path)
+    torch.save(model.state_dict(), "./model/handwriting_classifier_default.pth")
     model_initial += "Model Trained and Saved\n"
     print("Model Trained and Saved")
 
