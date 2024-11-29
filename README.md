@@ -24,4 +24,4 @@ Once you have Python Installed run the follow commands in project folder
     - pip install -r requirements.txt
 
 1. Run the app 
-    - > `python flask run`
+    - > `python -m flask run`
