@@ -31,7 +31,7 @@ async function saveImage() {
   const img = new Image();
   img.src = imageData;
 
-  await fetch("http://127.0.0.1:5000/process_image", {
+  await fetch("https://handwritingrecog.onrender.com/process_image", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
