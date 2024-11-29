@@ -14,7 +14,7 @@ def render_home():
         "model_initial": model_initial
     })
 
-@app.route("/test")
+@app.get("/test")
 def test():
     return "Hello from Flask"
 
