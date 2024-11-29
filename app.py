@@ -14,6 +14,11 @@ def render_home():
         "model_initial": model_initial
     })
 
+@app.route("/test")
+def test():
+    return "Hello from Flask"
+
+
 @app.post("/process_image")
 def process_image():
     image = request.get_json().get("image")
