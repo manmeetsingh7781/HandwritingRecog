@@ -25,3 +25,7 @@ Once you have Python Installed run the follow commands in project folder
 
 1. Run the app 
     - > `python -m flask run`
+
+# Adjust Script.js file in static/script.js 
+* Line 34 the fetch should request a URL that is being hosted by a server, for this app the server is render.com/process_image.
+* For local hosts, you must change it to your host address for example: https://127.0.1.0:5000
