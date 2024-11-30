@@ -5,3 +5,4 @@ gunicorn==20.1.0
 torchvision==0.20.1
 opencv-python
 matplotlib
+gunicorn
