@@ -220,11 +220,11 @@ def visualize_predictions():
 # plt.axis("off")
 # plt.show()
 
-def get_image(image_name):
+def get_image(image_path):
     # Load the trained model
     model.eval()
     #  4 6 -:> Fine tune
-    image = cv2.imread("./images/"+image_name)[:,:, 0]  # Read the image in grayscale
+    image = cv2.imread(image_path)[:,:, 0]  # Read the image in grayscale
     image = np.invert(image)  # Invert the image (white becomes black and vice versa)
     # make image more readable to model
 
